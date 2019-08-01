@@ -26,7 +26,7 @@ const SignUpForm = styled(FormContainer)`
 
     button{
         width: 70%;
-        height: 30px;
+        height: auto;
     }
 `
 

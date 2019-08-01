@@ -42,9 +42,9 @@ export const FormContainer = styled.div`
     justify-content: space-evenly;
  
     button{
-        width: 2rem;
+        height: auto;
         border-radius: 8px;
-        background-color: #66ccda;
+        background-color:  #654EB0;
         margin-left: 15px;
         margin-bottom: 10px;
         color: #ededed;

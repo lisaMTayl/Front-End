@@ -4,13 +4,11 @@ import { connect } from 'react-redux';
 
 import { login } from '../actions';
 
-
 import { PageContainer, 
         LoginContainer, 
         LoginHeader, 
         FormContainer, 
         InputContainer} from '../styled-components';
-
 
 
 const Login = props => {
