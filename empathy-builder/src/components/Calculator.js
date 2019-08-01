@@ -50,8 +50,13 @@ const CalculatorHolder = styled.div`
     height: auto;
     display: flex;
     flex-flow: row wrap;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
     justify-content: space-evenly;
-    align-items: start;
+    align-items: start;   
+    
 `
 const Column = styled.div`
     width: 45%;
@@ -64,18 +69,10 @@ const Column = styled.div`
     justify-content: start;
     align-items: center;
     padding-bottom: 1rem;
-/*    h2{
-        font-size: 2.7rem;
-        color: mediumpurple;
+        @media (max-width: 768px) {
+        width: 90%;
+        margin-bottom: 2rem;
     }
-    h3{
-        font-size: 2.5rem;
-        color: #654EB0;
-    }
-    h4{
-        font-size: 2rem;
-        color: white;
-    }*/
     
 `
 

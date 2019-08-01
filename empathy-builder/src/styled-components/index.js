@@ -82,6 +82,9 @@ export const InputContainer = styled.div`
 export const H2 = styled.h2`
   font-size: 2.7rem;
   color: white;
+      @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 `
 
 export const H3 = styled.h3`
@@ -118,6 +121,7 @@ export const Button = styled.button`
         &:hover{
             color: #654EB0;
             transition-duration: 0.2s;
+            text-decoration: underline;
         }
         }
 

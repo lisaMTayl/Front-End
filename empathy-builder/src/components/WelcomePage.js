@@ -8,6 +8,8 @@ import SignUp from './SignUp';
 
 import styled from "styled-components";
 import { Button, SiteLink } from '../styled-components/index'
+
+import Hidden from '@material-ui/core/Hidden';
 import Calculator from "./Calculator";
 
 /*phantom div to allocate layout space for the navbar*/
@@ -31,6 +33,9 @@ const PageContainer = styled.div `
 const Image = styled.img`
 background-color: white;
 height: 60%;
+
+
+
 `;
 
 const H1 = styled.h1`
@@ -55,9 +60,11 @@ export default function WelcomePage() {
         <Header/>
 
           <div>
-           <Image src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/reading_0re1.svg"
+           <Hidden smDown><Image src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/reading_0re1.svg"
               alt="woman reading"/>
+           </Hidden>
           </div>
+
         <div style={phantom}>
 
         </div>
