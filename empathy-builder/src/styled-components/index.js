@@ -25,11 +25,11 @@ export const LoginHeader = styled.div`
     flex-flow: column nowrap;
     align-items: center;
 
-    h1{
+/*    h1{
         font-size: 1.6rem;
         margin: 0;
         color: #602350;
-    }
+    }*/
     p{
         width: 80%;
         font-size: 1.2rem;
@@ -77,4 +77,18 @@ export const InputContainer = styled.div`
         margin-left: 4px;
         font-size: 20px;
     }
+`
+
+export const H2 = styled.h2`
+  font-size: 2.7rem;
+  color: white;
+`
+
+export const H3 = styled.h3`
+  font-size: 2.5rem;
+  color: #654EB0;
+`
+export const H4 = styled.h4`
+  font-size: 2rem;
+  color: #654EB0;
 `

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { updateTotals } from '../actions';
 import styled from 'styled-components';
+import { H2, H3, H4 } from '../styled-components/index'
 
 import LineItem from './LineItem';
 
@@ -13,8 +14,8 @@ import 'antd/dist/antd.css';
 import Footer from "./Footer";
 
 const phantom = {
-    display: 'block',
-    padding: '3rem',
+    display: 'flex',
+    padding: '1rem',
     height: '60px',
     width: '100%',
 };
@@ -24,7 +25,7 @@ const CalcPage = styled.div`
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 `
 
 const Results = styled.div`
@@ -60,9 +61,10 @@ const Column = styled.div`
     border-radius: 5px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    h2{
+    padding-bottom: 1rem;
+/*    h2{
         font-size: 2.7rem;
         color: mediumpurple;
     }
@@ -73,7 +75,7 @@ const Column = styled.div`
     h4{
         font-size: 2rem;
         color: white;
-    }
+    }*/
     
 `
 
@@ -86,6 +88,12 @@ const SubtotalStyle = styled.div `
     width: 90%;
     height: auto;
 `
+
+/*const H2 = styled.h2`
+      text-align: center;
+        font-size: 2.8rem;
+        color: #654EB0;
+`*/
 
 
 
@@ -121,13 +129,13 @@ const Calculator = props => {
         <CalcPage>
 
                 <Results>
-                    <h2>Total Cost for Relocation: ${recurringCalcTotal + relocationCalcTotal} </h2>
+                    <H3>Total Cost for Relocation: ${recurringCalcTotal + relocationCalcTotal} </H3>
                 </Results>
 
         <div style={phantom}/>
             <CalculatorHolder>
                 <Column>
-                    <h2>My Recurring Expenses</h2>
+                    <H2>My Recurring Expenses</H2>
                     {personalCosts.map(category => {
                         return <LineItem key={category.name} 
                                     categoryTotals={recurringCategoryTotals} 
@@ -138,18 +146,18 @@ const Calculator = props => {
                                 />
                     })}
 
-                    <SubtotalStyle><h4>Total Recurring Expenses: ${recurringCalcTotal}</h4></SubtotalStyle>
+                    <SubtotalStyle><H4>Total Recurring Expenses: ${recurringCalcTotal}</H4></SubtotalStyle>
 
 
                 </Column>
                 <Column>
-                    <h2>My Relocation Expenses</h2>
+                    <H2>My Relocation Expenses</H2>
                     {relocationCosts.map(category => {
                         return <LineItem key={category.name} categoryTotals={relocationCategoryTotals} setCategoryTotals={setRelocationCategoryTotals} category={category} 
                             />
                     })}
 
-                    <SubtotalStyle><h4>Total Relocation Expenses: ${relocationCalcTotal}</h4></SubtotalStyle>
+                    <SubtotalStyle><H4>Total Relocation Expenses: ${relocationCalcTotal}</H4></SubtotalStyle>
 
 
 
