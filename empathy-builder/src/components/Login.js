@@ -9,7 +9,7 @@ import { PageContainer,
         LoginContainer, 
         LoginHeader, 
         FormContainer, 
-        InputContainer} from '../styled-components';
+        InputContainer,} from '../styled-components';
 
 
 

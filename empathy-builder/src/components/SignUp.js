@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { signup } from '../actions';
 
 
+
+
 import { PageContainer, 
     LoginContainer, 
     LoginHeader, 
@@ -26,7 +28,8 @@ const SignUpForm = styled(FormContainer)`
 
     button{
         width: 70%;
-        height: 30px;
+        height: auto;
+        background-color: #654EB0;
     }
 `
 

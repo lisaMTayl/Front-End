@@ -73,8 +73,6 @@ const NavBar = () => {
               <NavLink to='/login'>Log In</NavLink>
               <NavLink to='/signup'>Sign Up</NavLink>
               <NavLink to="/learn">Learn More</NavLink>
-
-
             </div>
           )}
         </Links>
