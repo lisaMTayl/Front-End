@@ -122,9 +122,8 @@ const Calculator = props => {
                                 />
                     })}
 
-                    <SubtotalStyle><h4>Total Recurring Expenses: ${recurringTotal}</h4></SubtotalStyle>
+                    <SubtotalStyle><h4>Total Recurring Expenses: ${recurringCalcTotal}</h4></SubtotalStyle>
 
-                    <h3>Total Recurring Expenses: ${recurringCalcTotal}</h3>
 
                 </Column>
                 <Column>
@@ -134,9 +133,8 @@ const Calculator = props => {
                             />
                     })}
 
-                    <SubtotalStyle><h4>Total Relocation Expenses: ${Math.floor(relocationTotal)}</h4></SubtotalStyle>
+                    <SubtotalStyle><h4>Total Relocation Expenses: ${relocationCalcTotal}</h4></SubtotalStyle>
 
-                    <h3>Total Relocation Expenses: ${relocationCalcTotal}</h3>
 
 
                 </Column>
