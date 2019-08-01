@@ -15,8 +15,8 @@ export default function Footer() {
 
   return (
     <FooterDiv>
-      <div>Copyright and cool stuff go here</div>
-      <div>Disclaimer text here</div>
+      <div>Another amazing app by your friendly Lambda Development team!</div>
+      <div>For educational purposes only</div>
     </FooterDiv>
   );
 }

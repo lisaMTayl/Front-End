@@ -9,6 +9,7 @@ import { PageContainer,
         LoginHeader, 
         FormContainer, 
         InputContainer} from '../styled-components';
+import Footer from "./Footer";
 
 
 const Login = props => {
@@ -65,6 +66,7 @@ const Login = props => {
                     <button className="Login-button" onClick={e => login(e)}>Log In</button>
                 </FormContainer>
             </LoginContainer>
+            <Footer/>
         </PageContainer>
     );
 };

@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 import { signup } from '../actions';
 
-
 import { PageContainer, 
     LoginContainer, 
     LoginHeader, 
     FormContainer, 
     InputContainer} from '../styled-components';
+import Footer from "./Footer";
 
 
 const SignUpContainer = styled(LoginContainer)`
@@ -107,7 +107,7 @@ const SignUp = props => {
                 </SignUpForm>
                 
             </SignUpContainer>
-            
+            <Footer/>
         </PageContainer>
     )
 };

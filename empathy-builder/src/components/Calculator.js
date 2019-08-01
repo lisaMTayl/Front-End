@@ -10,46 +10,61 @@ import { personalCosts, relocationCosts } from '../cost data';
 
 
 import 'antd/dist/antd.css';
+import Footer from "./Footer";
+
+const phantom = {
+    display: 'block',
+    padding: '3rem',
+    height: '60px',
+    width: '100%',
+};
 
 const CalcPage = styled.div`
     margin-top: 100px;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
 `
 
 const Results = styled.div`
+    display: flex;
+    margin: auto;
     width: 80vw;
     height: 80px;
+    align-items: center;
     //background-color: #DB6AA7;
     background-color: #6DFACC;
     border: 1px solid #66ccda;
     border-radius: 5px;
     h2{
-        color: white;
+    text-align: center;
+        font-size: 2.8rem;
+        color: #654EB0;
     }
 `
 
 const CalculatorHolder = styled.div`
     width: 100vw;
-    height: 70vh;
+    height: auto;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: start;
 `
 const Column = styled.div`
     width: 45%;
     max-width: 600px;
-    height: 800px;
+    height: auto;
     background-color: mediumpurple;
     border-radius: 5px;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
     h2{
         font-size: 2.7rem;
-        color: white;
+        color: mediumpurple;
     }
     h3{
         font-size: 2.5rem;
@@ -104,11 +119,12 @@ const Calculator = props => {
  
     return(
         <CalcPage>
-            <Results>
-                <h2>Total Cost for Relocation: ${recurringCalcTotal + relocationCalcTotal} </h2>
 
-            </Results>
-        
+                <Results>
+                    <h2>Total Cost for Relocation: ${recurringCalcTotal + relocationCalcTotal} </h2>
+                </Results>
+
+        <div style={phantom}/>
             <CalculatorHolder>
                 <Column>
                     <h2>My Recurring Expenses</h2>
@@ -139,6 +155,7 @@ const Calculator = props => {
 
                 </Column>
             </CalculatorHolder>
+            <Footer/>
         </CalcPage>
     );
 };

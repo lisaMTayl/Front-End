@@ -5,7 +5,7 @@ import Login from './Login';
 import SignUp from './SignUp';
 
 
-import '../App.css';
+
 import styled from "styled-components";
 import Calculator from "./Calculator";
 
