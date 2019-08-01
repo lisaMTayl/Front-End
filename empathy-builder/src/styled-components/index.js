@@ -92,3 +92,38 @@ export const H4 = styled.h4`
   font-size: 2rem;
   color: #654EB0;
 `
+
+export const Button = styled.button`
+  border-radius: 8px;
+  padding: 0.8rem 1.6rem;
+  margin: 0.8rem 1.4rem;
+  width: auto;
+  background: #654EB0;
+  font-size: 1.2rem;
+  border: 2px solid #654EB0;
+  box-shadow: 0px 10px 14px -7px #654eb0;
+  color: white;
+
+    .active{
+        font-weight: bold;
+        text-decoration: none;
+        color: #f9bbb1;
+    }
+
+    a{
+        color: white;
+        margin: 0px 20px;
+        font-size: 1.4rem;
+        text-decoration: none;
+        &:hover{
+            color: #654EB0;
+            transition-duration: 0.2s;
+        }
+        }
+
+`
+
+
+
+
+

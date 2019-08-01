@@ -7,6 +7,7 @@ import SignUp from './SignUp';
 
 
 import styled from "styled-components";
+import { Button, SiteLink } from '../styled-components/index'
 import Calculator from "./Calculator";
 
 /*phantom div to allocate layout space for the navbar*/
@@ -66,8 +67,8 @@ export default function WelcomePage() {
           </H3>
         </div>
         <div className='BtnGroup'>
-          <button><Link to={"Calculator"} className="link">Anonymous Mode</Link></button>
-          <button><Link to={"SignUp"} className="link">Account SignUp</Link></button>
+          <Button><Link to={"Calculator"} className="link">Anonymous Mode</Link></Button>
+          <Button><Link to={"SignUp"} className="link">Account SignUp</Link></Button>
         </div>
 
         <div>
