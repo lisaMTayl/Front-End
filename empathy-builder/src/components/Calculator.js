@@ -34,12 +34,12 @@ const Results = styled.div`
     width: 80vw;
     height: 80px;
     align-items: center;
+    justify-content: center;
     //background-color: #DB6AA7;
     background-color: #6DFACC;
     border: 1px solid #66ccda;
     border-radius: 5px;
     h2{
-    text-align: center;
         font-size: 2.8rem;
         color: #654EB0;
     }
