@@ -73,7 +73,7 @@ const Login = props => {
 
 const mapStateToProps = state => {
     return{
-        user: state.user,
+        userId: state.userId,
         loggedIn: state.loggedIn,
         error: state.error,
         isLoading: state.isLoading,

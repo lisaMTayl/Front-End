@@ -2,12 +2,13 @@ import {
     LOGIN_START,
     LOGIN_SUCCESS,
     SIGNUP,
+    UPDATE_TOTALS_START
 } from '../actions';
 
 //DUMMY DATA used to explain Store and action stuff to teammates
 
 const initialState = {
-    user: '',
+    userId: '',
     loggedIn: false,
     isLoading: false,
     error: '',
@@ -27,7 +28,7 @@ const reducer = (state = initialState, action) => {
         case LOGIN_SUCCESS:
             return{
                 ...state,
-                user: action.payload.user,
+                userId: action.payload.id,
                 loggedIn: true,
                 isLoading: false,
                 error: ''
@@ -37,9 +38,13 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 error: '',
                 loggingIn: false,
-                user: '',
             }
-        
+        case UPDATE_TOTALS_START:
+            return {
+                ...state,
+                error: '',
+                isLoading: true,
+            }
         default:
         return state;
     }

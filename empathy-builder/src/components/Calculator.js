@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { updateTotals } from '../actions';
 import styled from 'styled-components';
 
 import LineItem from './LineItem';
@@ -71,70 +73,86 @@ const SubtotalStyle = styled.div `
 `
 
 
-const Calculator = props => {
-    
-    
 
-    const [recurringTotal, setRecurringTotal] = useState(0);
-    const [relocationTotal, setRelocationTotal] = useState(0);
+
+const Calculator = props => {
+    console.log('Calculator props:', props);
+    
     const [recurringCategoryTotals, setRecurringCategoryTotals] = useState({
         Food: 0,
-        Transportation: 0,
+        Car: 0,
         Health: 0,
         Debt: 0,
         Housing: 0,
-        Utilities: 0,
+        Bills: 0,
         Clothing: 0
     });
 
     const [relocationCategoryTotals, setRelocationCategoryTotals] = useState({
         Career: 0,
-        Lodging: 0,
         Housing: 0,
         Transportation: 0,
         Miscellaneous: 0,
     });
 
-    
+    const Sum = obj => {
+        return Object.keys(obj).reduce((sum, key) => sum+parseFloat(obj[key] || 0), 0);
+    };
 
-
-
-    const updateRecurringTotal = (amount) => {
-        let newSum = recurringTotal + amount;
-        setRecurringTotal(newSum);
-    }
-
-    const updateRelocationTotal = amount => {
-        let newSum = relocationTotal + amount;
-        setRelocationTotal(newSum);
-    }
-
+    const recurringCalcTotal = Sum(recurringCategoryTotals)
+    const relocationCalcTotal = Sum(relocationCategoryTotals)
+ 
     return(
         <CalcPage>
             <Results>
-                <h2>Total Cost for Relocation: ${recurringTotal + relocationTotal} </h2>
+                <h2>Total Cost for Relocation: ${recurringCalcTotal + relocationCalcTotal} </h2>
+
             </Results>
         
             <CalculatorHolder>
                 <Column>
                     <h2>My Recurring Expenses</h2>
                     {personalCosts.map(category => {
-                        return <LineItem key={category.name} category={category} updateRecurringTotal={updateRecurringTotal} 
-                            />
+                        return <LineItem key={category.name} 
+                                    categoryTotals={recurringCategoryTotals} 
+                                    setCategoryTotals={setRecurringCategoryTotals} 
+                                    category={category}
+                                    updateTotals={props.updateTotals}
+                                    userId={props.userId}
+                                />
                     })}
-                    <SubtotalStyle><h4>Total Recurring Expenses: ${recurringTotal}</h4></SubtotalStyle>
+
+                    <SubtotalStyle><h4>Total Recurring Expenses: ${recurringCalcTotal}</h4></SubtotalStyle>
+
+
                 </Column>
                 <Column>
                     <h2>My Relocation Expenses</h2>
                     {relocationCosts.map(category => {
-                        return <LineItem key={category.name} category={category} updateRelocationTotal={updateRelocationTotal} 
+                        return <LineItem key={category.name} categoryTotals={relocationCategoryTotals} setCategoryTotals={setRelocationCategoryTotals} category={category} 
                             />
                     })}
-                    <SubtotalStyle><h4>Total Relocation Expenses: ${Math.floor(relocationTotal)}</h4></SubtotalStyle>
+
+                    <SubtotalStyle><h4>Total Relocation Expenses: ${relocationCalcTotal}</h4></SubtotalStyle>
+
+
+
                 </Column>
             </CalculatorHolder>
         </CalcPage>
     );
 };
 
-export default Calculator;
+const mapStateToProps = state => {
+    return{
+        userId: state.userId,
+        loggedIn: state.loggedIn,
+        error: state.error,
+        isLoading: state.isLoading,
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    { updateTotals } 
+)(Calculator);
