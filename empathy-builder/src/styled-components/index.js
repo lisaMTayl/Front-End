@@ -25,11 +25,6 @@ export const LoginHeader = styled.div`
     flex-flow: column nowrap;
     align-items: center;
 
-/*    h1{
-        font-size: 1.6rem;
-        margin: 0;
-        color: #602350;
-    }*/
     p{
         width: 80%;
         font-size: 1.2rem;

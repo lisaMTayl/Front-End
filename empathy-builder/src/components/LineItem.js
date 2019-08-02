@@ -81,6 +81,7 @@ const LineItem = props => {
             visible={modalVisible}
             onOk={e => handleModal(e)}
             onCancel={handleCancel}
+            style={{backgroundColor: 'mediumpurple'}}
             >
             <H3>Things to consider: </H3>
                 {props.category.categories.map(category => {
