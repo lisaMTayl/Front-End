@@ -8,6 +8,9 @@ const NavContainer = styled.div`
     background-color: #654EB0;
     position: fixed;
     z-index: 10000;
+        @media (max-width: 768px) {
+        height: auto;
+    }
 `
 
 const NavigationBar = styled.div`
@@ -20,6 +23,11 @@ const NavigationBar = styled.div`
     align-items: center;
     margin: 0 auto;
     z-index: 1000;
+        @media (max-width: 768px) {
+        flex-flow: column wrap;
+        height: auto;
+
+    }
 `
 
 const NavLogo = styled.div`

@@ -16,7 +16,7 @@ export const LoginContainer = styled.div`
     box-shadow: 0 0 37px 5px #00000017;
     display: flex;
     flex-flow: row nowrap;
-    align-items: baseline
+    align-items: baseline;
     justify-content: space-evenly;
 `
 
@@ -62,10 +62,11 @@ export const InputContainer = styled.div`
     flex-flow: row nowrap;
     align-items: baseline;
 
+
     label{
         font-size: 1.3rem;
         color: #1C1C1C;
-        margin-left: 5px;
+        margin-left: 10px;
     }
     input{
         border-radius: 8px;
@@ -76,9 +77,9 @@ export const InputContainer = styled.div`
         margin-bottom: 10px;
         margin-left: 4px;
         font-size: 20px;
-    }
+        color:#654EB0;
+padding: .5rem;
 `
-
 export const H2 = styled.h2`
   font-size: 2.7rem;
   color: white;
@@ -96,6 +97,9 @@ export const H4 = styled.h4`
   color: #654EB0;
 `
 
+export const P = styled.p`
+    font-size: 1.2rem;
+`
 export const Button = styled.button`
   border-radius: 8px;
   padding: 0.8rem 1.6rem;

@@ -14,15 +14,17 @@ import Footer from "./Footer";
 
 const SignUpContainer = styled(LoginContainer)`
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
 `
 
 const SignUpForm = styled(FormContainer)`
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     align-items: center;
     margin-right: 15px;
+    max-width: 600px;
+
 
     button{
         width: 70%;
@@ -33,8 +35,8 @@ const SignUpForm = styled(FormContainer)`
 const SignUpInputs = styled(InputContainer)`
     margin-top: 20px;
     display: flex;
-    flex-flow: column nowrap;
-
+    flex-flow: column wrap;
+  
     input{
         width: 300px;
     }

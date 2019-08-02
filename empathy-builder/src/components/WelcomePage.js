@@ -8,6 +8,7 @@ import SignUp from './SignUp';
 
 import styled from "styled-components";
 import { Button, SiteLink } from '../styled-components/index'
+import { H2, H3, H4, P } from '../styled-components/index'
 
 import Hidden from '@material-ui/core/Hidden';
 import Calculator from "./Calculator";
@@ -38,14 +39,14 @@ height: 60%;
 
 `;
 
-const H1 = styled.h1`
+/*const H1 = styled.h1`
     font-size: 3rem;
 
 `;
 
 const H3 =styled.h3`
     font-size: 2rem;
-`;
+`;*/
 
 const Header = styled.div`
     padding: 2rem auto 1rem;
@@ -69,9 +70,13 @@ export default function WelcomePage() {
 
         </div>
         <div>
-          <H3>Definition, thought and rise. Everything we do is connected with suffering: booda-hood, surrender,
-          ascension, joy.
-          </H3>
+          <H3>Empathy Builder: A budgeting tool</H3>
+          <P>Domestic violence is real and the cost to leave can be frightening.  Don't worry, we are here to help. {"\n"}Click one of the buttons below to run the calculator and and we will help estimate how much money
+            you will need to move on.</P>
+
+          <P> Anonymous Mode will bring you straight to the calculator with no muss or fuss.
+            If you prefer to save your results, simply choose Account SignUp.  If you already have an account, you may
+            log in at any time.</P>
         </div>
         <div className='BtnGroup'>
           <Button><Link to={"Calculator"} className="link">Anonymous Mode</Link></Button>
@@ -79,8 +84,7 @@ export default function WelcomePage() {
         </div>
 
         <div>
-          <p>Die and you will be developed confidently. If you exist or preach with an inner moonlight, relativity knows
-            you. As i have captured you, so you must hurt one another.</p>
+
         </div>
 
     </Welcome>

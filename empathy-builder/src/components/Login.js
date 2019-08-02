@@ -9,6 +9,7 @@ import { PageContainer,
         LoginHeader, 
         FormContainer, 
         InputContainer} from '../styled-components';
+import { H2, H3, H4 } from '../styled-components/index'
 import Footer from "./Footer";
 
 
@@ -38,7 +39,7 @@ const Login = props => {
         <PageContainer>
             <LoginContainer>
                 <LoginHeader>
-                    <h1> Log In</h1>
+                    <H3> Log In</H3>
                 </LoginHeader>
                 <FormContainer>
                     <form onSubmit={e => login(e)}>

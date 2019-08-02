@@ -32,7 +32,7 @@ const Results = styled.div`
     display: flex;
     margin: auto;
     width: 80vw;
-    height: 80px;
+    height: auto;
     align-items: center;
     justify-content: center;
     //background-color: #DB6AA7;
@@ -55,7 +55,8 @@ const CalculatorHolder = styled.div`
         align-items: center;
     }
     justify-content: space-evenly;
-    align-items: start;   
+    align-items: start;  
+    margin-bottom: 6rem; 
     
 `
 const Column = styled.div`
