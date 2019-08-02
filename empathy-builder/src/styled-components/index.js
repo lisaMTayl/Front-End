@@ -125,6 +125,11 @@ export const Button = styled.button`
   box-shadow: 0px 10px 14px -7px #654eb0;
   color: white;
 
+        &:hover{
+            background-color: #9ddee7;
+            transition-duration: 0.2s;
+        }
+
     .active{
         font-weight: bold;
         text-decoration: none;
