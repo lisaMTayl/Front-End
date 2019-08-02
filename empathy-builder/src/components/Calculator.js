@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { updateTotals } from '../actions';
-import styled from 'styled-components';
-import { H2, H3, H4 } from '../styled-components/index'
 
 import LineItem from './LineItem';
-
+import Footer from "./Footer";
 import { personalCosts, relocationCosts } from '../cost data';
 
-
-
 import 'antd/dist/antd.css';
-import Footer from "./Footer";
+import styled from 'styled-components';
+import {Button, H2, H3, H4} from '../styled-components/index'
+import {Link} from "react-router-dom";
+
 
 const phantom = {
     display: 'flex',
@@ -57,8 +56,8 @@ const CalculatorHolder = styled.div`
     justify-content: space-evenly;
     align-items: start;  
     margin-bottom: 6rem; 
-    
 `
+
 const Column = styled.div`
     width: 45%;
     max-width: 600px;
@@ -73,12 +72,10 @@ const Column = styled.div`
         @media (max-width: 768px) {
         width: 90%;
         margin-bottom: 2rem;
-    }
-    
+    } 
 `
 
 const SubtotalStyle = styled.div `
-    //background-color: #DB6AA7;
     background-color: #6DFACC;
     border: 1px solid #66ccda;
     border-radius: 5px;
@@ -86,14 +83,6 @@ const SubtotalStyle = styled.div `
     width: 90%;
     height: auto;
 `
-
-/*const H2 = styled.h2`
-      text-align: center;
-        font-size: 2.8rem;
-        color: #654EB0;
-`*/
-
-
 
 
 const Calculator = props => {
@@ -161,6 +150,7 @@ const Calculator = props => {
 
                 </Column>
             </CalculatorHolder>
+            <Button><Link to={"SignUp"} className="link">Account SignUp</Link></Button>
             <Footer/>
         </CalcPage>
     );

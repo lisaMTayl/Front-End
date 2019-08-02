@@ -4,23 +4,6 @@ import styled from 'styled-components';
 import { H2, H3, H4 } from '../styled-components/index'
 
 
-/*const Item = styled.div`
-    width: 90%;
-    height: auto;
-    background-color: #66ccda;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: baseline;
-    margin: 5px 5px;
-    border-radius: 4px;
-    text-align: left;
-    &:hover{
-        background-color: #9ddee7;
-        transition-duration: 0.2s;
-    }
-`*/
-
 const Item = styled.div`
     width: 90%;
     height: auto;
@@ -34,7 +17,7 @@ const Item = styled.div`
     border-radius: 4px;
 
     &:hover{
-        background-color: #FEBAED;
+        background-color: #AFF3C1;
         transition-duration: 0.2s;
     }
 `

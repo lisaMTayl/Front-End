@@ -1,22 +1,19 @@
 import React from 'react';
 import Footer from "./Footer";
+import styled from "styled-components";
 
-/*phantom div to allocate layout space for the navbar*/
-const phantom = {
-  display: 'block',
-  padding: '3rem',
-  height: '60px',
-  width: '100%',
-};
+const Container = styled.div`
+margin-top: 100px;
+
+`
 
 export default function LearnMore() {
 
   return (
-    <div>
-      <div style={phantom} />
+    <Container>
      <h2>Resources</h2>
       <Footer/>
-    </div>
+    </Container>
   )
 
 }
