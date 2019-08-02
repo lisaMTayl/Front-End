@@ -5,17 +5,14 @@ import Login from './Login';
 import SignUp from './SignUp';
 import Calculator from "./Calculator";
 
-
 import styled from "styled-components";
-import {Button, H2, H3, H4, H5, P, Phantom} from '../styled-components/index'
+import {Button, H3, P} from '../styled-components/index'
 import Hidden from '@material-ui/core/Hidden';
-import Divider from '@material-ui/core/Divider';
 
-
+/*Styled Components*/
 const Welcome = styled.div`
     padding-bottom: 5rem;
     background-color: white;
-    
 `;
 
 const PageContainer = styled.div `
@@ -32,13 +29,12 @@ const Header = styled.div`
     padding: 2rem auto 1rem;
 `;
 
-// Import components into Welcome Page
+
 export default function WelcomePage() {
 
   return (
     <PageContainer>
       <Welcome>
-
         <Header/>
           <div>
            <Hidden smDown><Image src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/reading_0re1.svg"
