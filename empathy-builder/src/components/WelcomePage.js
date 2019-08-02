@@ -45,22 +45,18 @@ export default function WelcomePage() {
               alt="woman reading"/>
            </Hidden>
           </div>
-
-
         <div>
           <H3>Empathy Builder: A budgeting tool</H3>
-
         </div>
 
         <div>
           <P>Domestic violence is real. The cost to leave can be overwhelming, but we are here to help.</P>
           <P>Click one of the buttons below and we will estimate your monthly expenses and relocation costs.<br />
-
             (If you already have an account, you may <Link to={"Login"} className="link"> login</Link> at any time.)</P>
         </div>
         <div>
           <Button><Link to={"Calculator"} className="link">Anonymous Mode</Link></Button>
-          <Button><Link to={"SignUp"} className="link">Account SignUp</Link></Button>>
+          <Button><Link to={"SignUp"} className="link">Account SignUp</Link></Button>
         </div>
 
     </Welcome>

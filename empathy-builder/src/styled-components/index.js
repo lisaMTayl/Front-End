@@ -121,7 +121,7 @@ export const P = styled.p`
 
 export const Button = styled.button`
   border-radius: 8px;
-  padding: 0.8rem 1.6rem;
+  padding: 0.2rem 1.6rem;
   margin: 0.8rem 1.4rem;
   width: auto;
   background: #654EB0;
@@ -149,8 +149,3 @@ export const Button = styled.button`
         }
 
 `
-
-
-
-
-

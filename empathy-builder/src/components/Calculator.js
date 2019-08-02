@@ -120,6 +120,7 @@ const Calculator = props => {
                 </Results>
 
         <div style={phantom}/>
+
             <CalculatorHolder>
                 <Column>
                     <H2>My Recurring Expenses</H2>

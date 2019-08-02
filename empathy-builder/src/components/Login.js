@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+
 import { connect } from 'react-redux';
 
 import { login } from '../actions';
 
-import { PageContainer, 
-        LoginContainer, 
-        LoginHeader, 
-        FormContainer, 
-        InputContainer} from '../styled-components';
-import { H2, H3, H4 } from '../styled-components/index'
+import {
+    PageContainer,
+    LoginContainer,
+    LoginHeader,
+    FormContainer,
+    InputContainer,
+    Button
+} from '../styled-components';
+import { H3 } from '../styled-components/index'
 import Footer from "./Footer";
+
+import {Link} from "react-router-dom";
 
 
 const Login = props => {
@@ -64,7 +69,7 @@ const Login = props => {
                             />
                         </InputContainer>
                     </form>
-                    <button className="Login-button" onClick={e => login(e)}>Log In</button>
+                    <Button className="Login-button" onClick={e => login(e)}>Log In</Button>
                 </FormContainer>
             </LoginContainer>
             <Footer/>

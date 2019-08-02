@@ -8,7 +8,7 @@ import { PageContainer,
     LoginContainer, 
     LoginHeader, 
     FormContainer, 
-    InputContainer} from '../styled-components';
+    InputContainer, Button} from '../styled-components';
 import Footer from "./Footer";
 
 
@@ -26,10 +26,10 @@ const SignUpForm = styled(FormContainer)`
     max-width: 600px;
 
 
-    button{
-        width: 70%;
+/*    button{
+        width: 30%;
         height: auto;
-    }
+    }*/
 `
 
 const SignUpInputs = styled(InputContainer)`
@@ -105,7 +105,7 @@ const SignUp = props => {
                                 />
                         </SignUpInputs>
                     </form>
-                    <button className="Login-button" onClick={signup}>Sign Up</button>
+                    <Button className="Login-button" onClick={signup}>Sign Up</Button>
                 </SignUpForm>
                 
             </SignUpContainer>
